@@ -6,9 +6,9 @@
 - [ ] Login html min. 1h
 - [ ] Login css min. 1h
 - [ ] Condiciones html 1h
+- [ ] Auth html & Json.Users 1h
 - [ ] Login js funcionalidad requerida 4h
-- [ ] Json.Users 1h
-- [ ] Auth html & js funcionalidad requerida 1h
+- [ ] Auth js funcionalidad requerida 1h
 - [ ] Json.articles 2h
 - [ ] Blog html min. 1h
 - [ ] Blog css min. 1h
@@ -57,3 +57,7 @@
 
 - [x] Index html  min. Times: 1h 1h
 - [x] Index css min. Times: 1h 1h
+- [x] Login html min. Times: 1h 1h
+- [x] Login css min. Times: 1h 1h
+- [x] Condiciones html Times: 1h 1h
+- [x] Auth html & Json.Users Times: 1h 0h
