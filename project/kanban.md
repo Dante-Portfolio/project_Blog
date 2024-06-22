@@ -54,3 +54,6 @@
 # [Revision]
 
 # [Finalizado]
+
+- [x] Index html  min. Times: 1h 1h
+- [x] Index css min. Times: 1h 1h

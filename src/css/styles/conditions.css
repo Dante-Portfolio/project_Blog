@@ -1,0 +1,29 @@
+@import "vars_config.css";
+
+body {
+    width: 100vw;
+    background-color: var(--colorBackground);
+    color: var(--colorText);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    header,
+    main {
+        width: 70%;
+
+        h1 {
+            text-align: center;
+        }
+    }
+
+    main {
+        h2 {
+            margin-top: 60px;
+        }
+
+        p {
+            text-indent: 100px;
+        }
+    }
+}
