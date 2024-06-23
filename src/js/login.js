@@ -25,7 +25,7 @@ function testForm() {
 
 function redirection(param) {
     if (param == 'passed') {
-        window.open('../html/auth.html?user=' + user.value + '&' + pass.value)
+        window.open('../html/auth.html?user=' + user.value + '&pass=' + pass.value, '_self')
     }
 }
 accept.onclick = changeSubmit
