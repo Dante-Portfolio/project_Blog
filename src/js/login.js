@@ -2,7 +2,14 @@ const user = document.getElementById('user')
 const pass = document.getElementById('pass')
 const accept = document.getElementById('accept')
 const send = document.getElementById('send')
-// send.preventDefault
+
+function alertLogin() {
+    const params = new URLSearchParams(location.search)
+    const check = params != '' ? true : false
+    if (check) {
+        alert('Login incorrecto')
+    }
+}
 
 function changeSubmit() {
     if (send.disabled) {
@@ -19,7 +26,7 @@ function testForm() {
     if (user.value.length > 0 && pass.value.length > 0) {
         redirection('passed')
     } else {
-        alert('revisa todos los campos')
+        alert('Revisa todos los campos')
     }
 }
 
@@ -28,5 +35,7 @@ function redirection(param) {
         window.open('../html/auth.html?user=' + user.value + '&pass=' + pass.value, '_self')
     }
 }
+
 accept.onclick = changeSubmit
 send.addEventListener('click', testForm)
+setTimeout(alertLogin, 500)

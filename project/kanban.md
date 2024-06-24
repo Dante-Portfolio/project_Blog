@@ -43,19 +43,22 @@
 
 # [Spring]
 
-- [x]   Index html + js
+- [ ]   Index html + js
         Login html + css + js
         Condiciones html + css
+        Testing 
 
-- [x]   Login js
-        Auth html + js
+- [ ]   Login js
+        Auth html + js 
         Condiciones html + css
+        Testing 
 
 - [ ]   Users Json
         Articles Json
 
 - [ ]   Blog html + css
         Blog js
+        Testing 
 
 - [ ]   Articles components
 

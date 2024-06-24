@@ -17,10 +17,15 @@ async function getData() {
 // funcion principal > getData > getFecth
 async function info() {
     const dataLogin = await getData()
+    let login
     for (const userLogin of dataLogin) {
         if (user === userLogin.username) {
             window.open('../html/blog.html', '_self')
+            return
         }
+    }
+    if (login != 'undefined') {
+        window.open('../html/login.html?login', '_self')
     }
 }
 
