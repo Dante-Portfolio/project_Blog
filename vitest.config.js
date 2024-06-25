@@ -5,7 +5,8 @@ export default defineConfig({
     test: {
         clearMocks: true,
         globals: true,
-        setupFiles: ['dotenv/config'],
+        environment: 'jsdom',
+        // setupFiles: ['dotenv/config'],
     },
     resolve: {
         alias: {

@@ -1,41 +1,50 @@
 const user = document.getElementById('user')
 const pass = document.getElementById('pass')
-const accept = document.getElementById('accept')
-const send = document.getElementById('send')
+let accept = document.getElementById('accept')
 
 function alertLogin() {
+    let test
     const params = new URLSearchParams(location.search)
-    const check = params != '' ? true : false
-    if (check) {
-        alert('Login incorrecto')
+    if (params.has('login')) {
+        alert('Vuelve a intentarlo\nLos datos introducidos son incorrectos')
+        test = true
     }
+    return test
 }
 
 function changeSubmit() {
-    if (send.disabled) {
-        send.removeAttribute('disabled')
+    let send = document.getElementById('send')
+    if (send.classList.contains('disabled')) {
+        send.classList.replace('disabled', 'enabled')
     } else {
-        send.disabled = true
+        send.classList.replace('enabled', 'disabled')
     }
 }
 
-function testForm() {
-    if (user.value.split(' ').length != 1 || pass.value.split(' ').length != 1) {
+function testForm(par1, par2) {
+    let test 
+    const username = par1
+    const password = par2
+    if (username.toString().split(' ').length > 1 || password.toString().split(' ').length > 1) {
         alert('Los espacios no están permitidos')
+        test = false
+        return test
     }
-    if (user.value.length > 0 && pass.value.length > 0) {
-        redirection('passed')
+    if (username.length > 0 && password.length > 0) {
+        window.open('../html/auth.html?user=' + username + '&pass=' + password, '_self')
+        test = true
     } else {
-        alert('Revisa todos los campos')
+        alert('Revisa todos los campos, te faltan datos.')
+        test = false
     }
+    return test
 }
 
-function redirection(param) {
-    if (param == 'passed') {
-        window.open('../html/auth.html?user=' + user.value + '&pass=' + pass.value, '_self')
-    }
-}
+// si funciona en los tests
+document.addEventListener('DOMContentLoaded', () => {
+    accept.addEventListener("click", () => changeSubmit())
+    send.addEventListener("click", () => testForm(user.value, pass.value))
+    setTimeout(alertLogin, 500)
+})
 
-accept.onclick = changeSubmit
-send.addEventListener('click', testForm)
-setTimeout(alertLogin, 500)
+export {alertLogin, changeSubmit, testForm}

@@ -15,10 +15,14 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: var(--colorBackground);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     main {
         width: 800px;
         height: 80%;
+        border: 1px solid rgb(255, 0, 0);
 
         .container {
             position: relative;

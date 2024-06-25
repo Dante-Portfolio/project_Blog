@@ -100,10 +100,18 @@ body {
                 }
             }
 
-            .send {
+            .send{
                 border: 1px solid red;
                 width: 100%;
                 text-align: center;
+            }
+
+            .disabled{
+                color: rgb(68, 68, 68);
+            }
+
+            .enabled{
+                color: rgb(255, 255, 255);
             }
         }
     }
