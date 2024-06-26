@@ -1,4 +1,8 @@
 :root {
     --colorText: white;
     --colorBackground: rgb(16, 16, 16);
+
+    /* blog ........................................................*/
+    --heightHeader: 100px;
+    --widthAside: 200px;
 }

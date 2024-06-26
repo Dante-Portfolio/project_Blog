@@ -1,0 +1,40 @@
+@import "vars_config.css";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--colorBackground);
+    color: var(--colorText);
+    width: 100vw;
+    height: 100vh;
+
+    header {
+        width: 100%;
+        height: var(--heightHeader);
+        border: 1px solid red;
+    }
+
+    main {
+        display: flex;
+        width: 100vw;
+        height: calc(100vh - var(--heightHeader));
+
+        aside {
+            border: 1px solid red;
+            width: var(--widthAside);
+        }
+
+        .appContainer {
+            border: 1px solid white;
+            width: calc(100% - var(--widthAside));
+
+            h2 {
+                font-size: 30px;
+            }
+        }
+    }
+}
